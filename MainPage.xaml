@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnlacesRelativos.MainPage"
+             xmlns:local="clr-namespace:EnlacesRelativos.ViewModel"
+             xmlns:Controls="clr-namespace:EnlacesRelativos.Model"
+             BindingContext="{Controls:CardView}">
+    
+<!--Este codigo es para el primer ejemplo del video para verlo en funcionamiento por favor quitar los signos que lo envuelven de los comentarios y ejecutar-->
+    
+   <!-- 
+    <BoxView Color="Blue"
+             WidthRequest="200"
+             HeightRequest="{Binding Source={RelativeSource Self}, Path=WidthRequest}"
+             HorizontalOptions="Center"/>
+    -->
+
+    
+    
+    <!-- este codigo es para el segundo  ejemplo del video donde usamos el AncestorType para probar favor quitar los signos de tipo comentario que envuelven el codigo-->
+  
+    <!--
+    <ContentPage.BindingContext>
+        <local:ViewModelPorDefecto/>
+    </ContentPage.BindingContext>
+   
+    
+    <ListView 
+     ItemsSource="{Binding Employees}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="80" />
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                              Grid.Column="0"
+                              Text="{Binding nombre}"/>
+                        <Button 
+                              Grid.Column="1"
+                              Text="Delete" 
+                              CommandParameter="{Binding}" 
+                              Command="{Binding Source={RelativeSource AncestorType={x:Type local:ViewModelPorDefecto}}, Path=EliminarCommand}"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    -->
+    
+<!--este codigo es para el tercer ejemplo del video donde usamos el enlace relativo con la propiedad templatedParent para enlazar las propiedades de una platilla de control  a las de un objeto instanciado-->
+    
+  <!--
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="CardViewControlTemplate">
+            <Frame BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                 BackgroundColor="LightGray"
+                 BorderColor="DarkGray"
+                 CornerRadius="5"
+                 HasShadow="True"
+                 Padding="8"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="4" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1"
+                         Text="{Binding CardTitle}"
+                         FontAttributes="Bold"
+                         FontSize="18"
+                         VerticalTextAlignment="Center"
+                         HorizontalTextAlignment="Start" />
+                    <BoxView Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           BackgroundColor="Black"
+                           HeightRequest="2"
+                           HorizontalOptions="Fill" />
+                    <Label Grid.Row="2"
+                         Grid.ColumnSpan="2"
+                         Text="{Binding CardDescription}"
+                         VerticalTextAlignment="Start"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Fill"/>
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+    </ContentPage.Resources>
+
+    <StackLayout Spacing="10">
+        <Controls:CardView CardTitle="Colombia"
+                           CardDescription="Colombia es un país del extremo norte de Sudamérica. Su paisaje cuenta con bosques tropicales, las montañas de los Andes y varias plantaciones de café."
+                           ControlTemplate="{StaticResource CardViewControlTemplate}" />
+        
+        <Controls:CardView CardTitle="Mexico"
+                           CardDescription="México es un país entre los Estados Unidos y América Central, conocido por las playas en el Pacífico y el golfo de México, y su diverso paisaje de montañas, desiertos y selvas."
+                           ControlTemplate="{StaticResource CardViewControlTemplate}" />
+        
+        <Controls:CardView CardTitle="Peru"
+                           CardDescription="Perú es un país de Sudamérica que abarca una sección del bosque del Amazonas y Machu Picchu, una antigua ciudad inca en las alturas de los Andes"
+                           ControlTemplate="{StaticResource CardViewControlTemplate}" />
+    </StackLayout>
+
+   -->
+
+</ContentPage>
